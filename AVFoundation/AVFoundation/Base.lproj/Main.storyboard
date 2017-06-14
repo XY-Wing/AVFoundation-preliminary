@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xnq-mF-j1u">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AudioToolbox-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd3-4Q-nXi">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="锁屏音"/>
+                                <connections>
+                                    <action selector="lock" destination="BYZ-38-t0r" eventType="touchUpInside" id="AnF-dF-Bd1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edA-MY-Lm5">
+                                <rect key="frame" x="172" y="278" width="30" height="30"/>
+                                <state key="normal" title="哼"/>
+                                <connections>
+                                    <action selector="heng" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVW-no-imk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f43-cB-p56">
+                                <rect key="frame" x="164" y="358" width="46" height="30"/>
+                                <state key="normal" title="狼叫声"/>
+                                <connections>
+                                    <action selector="wolf" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqT-8e-oCB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rd3-4Q-nXi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B6y-4t-2wf"/>
+                            <constraint firstItem="Rd3-4Q-nXi" firstAttribute="top" secondItem="edA-MY-Lm5" secondAttribute="bottom" constant="10" id="IEB-xE-JeP"/>
+                            <constraint firstItem="edA-MY-Lm5" firstAttribute="centerX" secondItem="Rd3-4Q-nXi" secondAttribute="centerX" id="RoV-SU-YyD"/>
+                            <constraint firstItem="f43-cB-p56" firstAttribute="centerX" secondItem="Rd3-4Q-nXi" secondAttribute="centerX" id="kTz-wg-haU"/>
+                            <constraint firstItem="f43-cB-p56" firstAttribute="top" secondItem="Rd3-4Q-nXi" secondAttribute="bottom" constant="10" id="lQL-2a-nad"/>
+                            <constraint firstItem="Rd3-4Q-nXi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sbt-i1-q5n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AudioToolbox" id="if5-Ha-Ccm">
+                        <barButtonItem key="rightBarButtonItem" title="next" id="w2t-44-VNr">
+                            <connections>
+                                <segue destination="kyb-J0-XHS" kind="show" id="8FR-nT-zlP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="36"/>
+        </scene>
+        <!--AVAudioPlayer-->
+        <scene sceneID="y8y-a2-QB3">
+            <objects>
+                <viewController id="kyb-J0-XHS" customClass="AVAudioPlayerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c17-fu-qg5"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Af-7P-A9y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RWu-6V-jrY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AVAudioPlayer" id="pUb-lM-viK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vp9-yG-ddo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="33"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w8W-77-dbA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xnq-mF-j1u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H7c-ky-l8m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vij-j0-8Jc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2jo-wJ-V47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="36"/>
+        </scene>
+    </scenes>
+</document>
